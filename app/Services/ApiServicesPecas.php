@@ -15,7 +15,7 @@ class ApiServicesPecas
     public function getPecas()
     {
         try {
-            $response = $this->client->get('http://127.0.0.1:8000/getItens');
+            $response = $this->client->get('http://host.docker.internal:8000/getItens');
             $body = $response->getBody()->getContents();
             $data = json_decode($body, true);
     
